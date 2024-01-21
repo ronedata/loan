@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#dashboard, #lonAdd {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #333;
+}
+
+#loanForm {
+    margin-bottom: 20px;
+}
+
+#lonAddData {
+    margin-top: 10px;
+}
+
+/* Add additional styles as needed */

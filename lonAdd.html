@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Management</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- MDB CSS link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css">
+    <style>
+        .card-container {
+            margin-top: 20px;
+        }
+
+        /* Add your custom styles here */
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <h1 class="text-center mt-4 mb-5">Loan Management</h1>
+
+        <!-- Create button with link -->
+        <a class="btn btn-primary mb-3" href="https://script.google.com/macros/s/AKfycbzxowYA3DMTn2o5shAP6XpWyd4ihBPyOWyiDFlfa04RNwsY8dtcqCFlVeR1x67rDOvcBA/exec">
+            Create
+        </a>
+
+        <!-- MDB Nav tabs -->
+        <ul class="nav nav-tabs nav-justified" id="myTabs">
+            <li class="nav-item">
+                <a class="nav-link active" id="cardViewTab" data-toggle="tab" href="#cardView">Card View</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tableViewTab" data-toggle="tab" href="#tableView">Table View</a>
+            </li>
+        </ul>
+
+        <!-- MDB Tab Content -->
+        <div class="tab-content">
+            <!-- Card View Tab -->
+            <div class="tab-pane fade show active" id="cardView">
+                <div id="lonAddData" class="lon-add-data"></div>
+            </div>
+
+            <!-- Table View Tab -->
+            <div class="tab-pane fade" id="tableView">
+                <table class="table" id="lonAddTable"></table>
+            </div>
+        </div>
+
+        <!-- Back button with link -->
+        <a class="btn btn-secondary mt-3" href="#">Back</a>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- MDB JS link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Your JavaScript file -->
+    <script src="js/lonAdd.js"></script>
+
+</body>
+</html>
