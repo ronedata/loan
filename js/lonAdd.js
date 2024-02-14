@@ -77,6 +77,17 @@ function displayTableView(data) {
     thead.appendChild(headerRow);
     table.appendChild(thead);
 
+
+    //Action
+    const actionHeader = document.createElement('th');
+    actionHeader.textContent = 'Actions';
+    headerRow.appendChild(actionHeader);
+
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+
+	
     // Create table body
     const tbody = document.createElement('tbody');
     for (let i = 1; i < data.length; i++) {
@@ -87,6 +98,30 @@ function displayTableView(data) {
             td.textContent = field;
             tr.appendChild(td);
         }
+
+	    
+	// Add edit and delete buttons to each row
+        const editCell = document.createElement('td');
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Edit';
+        editButton.classList.add('btn', 'btn-primary', 'btn-sm', 'mr-1');
+        editButton.onclick = () => editData(i); // Call editData function with row index
+        editCell.appendChild(editButton);
+        
+        const deleteCell = document.createElement('td');
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('btn', 'btn-danger', 'btn-sm');
+        deleteButton.onclick = () => deleteData(i); // Call deleteData function with row index
+        deleteCell.appendChild(deleteButton);
+
+        tr.appendChild(editCell);
+        tr.appendChild(deleteCell);
+
+
+	    
+
+	    
         tbody.appendChild(tr);
     }
     table.appendChild(tbody);
