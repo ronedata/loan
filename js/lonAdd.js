@@ -163,8 +163,14 @@ function editData(data, index) {
     const rowData = data[rowIndex];
 
     // Populate the edit modal with the data to be edited
-    document.getElementById('editInput1').value = rowData[1]; // Assuming the first column is not editable
-    document.getElementById('editInput2').value = rowData[2]; // Change 'editInput2' to the corresponding id of your input field
+    document.getElementById('name').value = rowData[0];
+    document.getElementById('phone').value = rowData[1];
+    document.getElementById('address').value = rowData[2];
+    document.getElementById('lonAmount').value = rowData[3];
+    document.getElementById('date').value = rowData[4]; 
+    document.getElementById('interestAmount').value = rowData[5];
+    document.getElementById('paymentDate').value = rowData[6];
+
 
     // Open the edit modal
     $('#editModal').modal('show');
@@ -194,8 +200,13 @@ function saveChanges(data, index) {
     const rowData = data[rowIndex];
 
     // Update the data with the values entered in the edit modal
-    rowData[1] = document.getElementById('editInput1').value; // Assuming the first column is not editable
-    rowData[2] = document.getElementById('editInput2').value; // Change 'editInput2' to the corresponding id of your input field
+    rowData[0] = document.getElementById('name').value;
+    rowData[1] = document.getElementById('phone').value;
+    rowData[2] = document.getElementById('address').value;
+    rowData[3] = document.getElementById('lonAmount').value;
+    rowData[4] = document.getElementById('date').value;
+    rowData[5] = document.getElementById('interestAmount').value;
+    rowData[6] = document.getElementById('paymentDate').value;
 
     // Close the edit modal
     $('#editModal').modal('hide');
