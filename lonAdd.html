@@ -12,6 +12,8 @@
         .card-container {
             margin-top: 20px;
         }
+
+        / Add your custom styles here /
     </style>
 </head>
 <body>
@@ -39,7 +41,7 @@
         <div class="tab-content">
             <!-- Card View Tab -->
             <div class="tab-pane fade show active" id="cardView">
-                <div id="dashboardData" class="card-container"></div>
+                <div id="lonAddData" class="lon-add-data"></div>
             </div>
 
             <!-- Table View Tab -->
@@ -63,21 +65,5 @@
     <!-- Your JavaScript file -->
     <script src="js/lonAdd.js"></script>
 
-    <script>
-        // Call the getData function to fetch data and display it
-        getData().then(data => displayData(data));
-
-        // Function to edit data
-        function editData(index) {
-            // Implement edit functionality using the index parameter
-            console.log('Editing data at index:', index);
-        }
-
-        // Function to delete data
-        function deleteData(index) {
-            // Implement delete functionality using the index parameter
-            console.log('Deleting data at index:', index);
-        }
-    </script>
 </body>
 </html>
