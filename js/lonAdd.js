@@ -161,6 +161,14 @@ function editData(data, index) {
     const rowIndex = index;
     // Fetch the data row corresponding to the index
     const rowData = data[rowIndex];
+
+    // Populate the edit modal with the data to be edited
+    document.getElementById('editInput1').value = rowData[1]; // Assuming the first column is not editable
+    document.getElementById('editInput2').value = rowData[2]; // Change 'editInput2' to the corresponding id of your input field
+
+    // Open the edit modal
+    $('#editModal').modal('show');
+	
     // Here you can implement the logic to edit the data
     console.log('Editing data at index:', rowIndex);
     console.log('Data to edit:', rowData);
@@ -178,7 +186,24 @@ function deleteData(data, index) {
     displayTableView(data);
 }
 
+// Function to save the changes made in the edit modal
+function saveChanges(data, index) {
+    // Assuming the first row contains headers, so subtracting 1 from the index
+    const rowIndex = index;
+    // Fetch the data row corresponding to the index
+    const rowData = data[rowIndex];
 
+    // Update the data with the values entered in the edit modal
+    rowData[1] = document.getElementById('editInput1').value; // Assuming the first column is not editable
+    rowData[2] = document.getElementById('editInput2').value; // Change 'editInput2' to the corresponding id of your input field
+
+    // Close the edit modal
+    $('#editModal').modal('hide');
+
+    // Log the updated data (you can implement your logic to save the changes to your backend or update the UI)
+    console.log('Saving changes for row index:', rowIndex);
+    console.log('Updated data:', rowData);
+}
 
 
 // Example usage for lonAdd sheet
