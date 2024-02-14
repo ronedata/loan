@@ -39,22 +39,6 @@ function displayData(data) {
             field.innerHTML = `<strong>${data[i][index]}</strong>`;
             cardBody.appendChild(field);
         });
-
-        // Create edit and delete buttons
-        const editButton = document.createElement('button');
-        editButton.textContent = 'Edit';
-        editButton.classList.add('btn', 'btn-primary', 'mr-2');
-        editButton.onclick = () => editData(i); // Call editData function with index
-
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Delete';
-        deleteButton.classList.add('btn', 'btn-danger');
-        deleteButton.onclick = () => deleteData(i); // Call deleteData function with index
-
-        // Append buttons to card body
-        cardBody.appendChild(editButton);
-        cardBody.appendChild(deleteButton);
-       // End Create edit and delete buttons
         
         card.appendChild(cardBody);
         cardContainer.appendChild(card);
