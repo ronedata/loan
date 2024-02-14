@@ -40,12 +40,41 @@ function displayData(data) {
             cardBody.appendChild(field);
         });
 
+        // Create edit and delete buttons
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Edit';
+        editButton.classList.add('btn', 'btn-primary', 'mr-2');
+        editButton.onclick = () => editData(i); // Call editData function with index
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.classList.add('btn', 'btn-danger');
+        deleteButton.onclick = () => deleteData(i); // Call deleteData function with index
+
+        // Append buttons to card body
+        cardBody.appendChild(editButton);
+        cardBody.appendChild(deleteButton);
+       // End Create edit and delete buttons
+        
         card.appendChild(cardBody);
         cardContainer.appendChild(card);
     }
 
     container.appendChild(cardContainer);
 }
+
+// Function to edit data
+function editData(index) {
+    // Implement edit functionality using the index parameter
+    console.log('Editing data at index:', index);
+}
+
+// Function to delete data
+function deleteData(index) {
+    // Implement delete functionality using the index parameter
+    console.log('Deleting data at index:', index);
+}
+
 
 // Example usage for Dashboard sheet
 getData().then(data => displayData(data));
