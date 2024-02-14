@@ -105,14 +105,14 @@ function displayTableView(data) {
         const editButton = document.createElement('button');
         editButton.textContent = 'Edit';
         editButton.classList.add('btn', 'btn-primary', 'btn-sm', 'mr-1');
-        editButton.onclick = () => editData(i); // Call editData function with row index
+        editButton.onclick = () => editData(data,i); // Call editData function with row index
         editCell.appendChild(editButton);
         
         const deleteCell = document.createElement('td');
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
         deleteButton.classList.add('btn', 'btn-danger', 'btn-sm');
-        deleteButton.onclick = () => deleteData(i); // Call deleteData function with row index
+        deleteButton.onclick = () => deleteData(data,i); // Call deleteData function with row index
         deleteCell.appendChild(deleteButton);
 
         tr.appendChild(editCell);
