@@ -155,6 +155,32 @@ function createCard(headers, rowData) {
     return card;
 }
 
+// Function to edit data
+function editData(index) {
+    // Assuming the first row contains headers, so subtracting 1 from the index
+    const rowIndex = index - 1;
+    // Fetch the data row corresponding to the index
+    const rowData = data[rowIndex];
+    // Here you can implement the logic to edit the data
+    console.log('Editing data at index:', rowIndex);
+    console.log('Data to edit:', rowData);
+}
+
+// Function to delete data
+function deleteData(index) {
+    // Assuming the first row contains headers, so subtracting 1 from the index
+    const rowIndex = index - 1;
+    // Here you can implement the logic to delete the data
+    console.log('Deleting data at index:', rowIndex);
+    // Remove the row from the data array
+    data.splice(rowIndex, 1);
+    // Refresh the table view
+    displayTableView(data);
+}
+
+
+
+
 // Example usage for lonAdd sheet
 getData().then(data => {
     displayCardView(data);
