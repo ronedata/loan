@@ -47,18 +47,6 @@ function displayData(data) {
     container.appendChild(cardContainer);
 }
 
-// Function to edit data
-function editData(index) {
-    // Implement edit functionality using the index parameter
-    console.log('Editing data at index:', index);
-}
-
-// Function to delete data
-function deleteData(index) {
-    // Implement delete functionality using the index parameter
-    console.log('Deleting data at index:', index);
-}
-
 
 // Example usage for Dashboard sheet
 getData().then(data => displayData(data));
