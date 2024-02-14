@@ -158,7 +158,7 @@ function createCard(headers, rowData) {
 // Function to edit data
 function editData(data, index) {
     // Assuming the first row contains headers, so subtracting 1 from the index
-    const rowIndex = index - 1;
+    const rowIndex = index;
     // Fetch the data row corresponding to the index
     const rowData = data[rowIndex];
     // Here you can implement the logic to edit the data
@@ -169,7 +169,7 @@ function editData(data, index) {
 // Function to delete data
 function deleteData(data, index) {
     // Assuming the first row contains headers, so subtracting 1 from the index
-    const rowIndex = index - 1;
+    const rowIndex = index;
     // Here you can implement the logic to delete the data
     console.log('Deleting data at index:', rowIndex);
     // Remove the row from the data array
